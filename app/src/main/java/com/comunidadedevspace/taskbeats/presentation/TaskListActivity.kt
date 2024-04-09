@@ -1,4 +1,4 @@
- package com.comunidadedevspace.taskbeats
+ package com.comunidadedevspace.taskbeats.presentation
 
  import androidx.appcompat.app.AppCompatActivity
  import android.os.Bundle
@@ -11,6 +11,9 @@
  import androidx.activity.result.contract.ActivityResultContracts
  import androidx.recyclerview.widget.RecyclerView
  import androidx.room.Room
+ import com.comunidadedevspace.taskbeats.R
+ import com.comunidadedevspace.taskbeats.data.AppDataBase
+ import com.comunidadedevspace.taskbeats.data.Task
  import com.google.android.material.floatingactionbutton.FloatingActionButton
  import com.google.android.material.snackbar.Snackbar
  import kotlinx.coroutines.CoroutineScope
