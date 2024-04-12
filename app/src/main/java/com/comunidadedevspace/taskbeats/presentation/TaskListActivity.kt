@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         TaskListAdapter(::onListItemClicked)
     }
 
+    private val viewModel: TaskListViewModel by lazy {
+        TaskListViewModel.create(application)
+    }
+
     lateinit var dataBase : AppDataBase
 
     private val dao by lazy {
@@ -73,7 +77,7 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        dataBase = (application as TaskBeatsApplication).dataBase
+        dataBase = (application as TaskBeatsApplication).getAppDataBase()
         Log.d("ThainesTeste", dataBase.toString())
         listFromDataBase()
     }
