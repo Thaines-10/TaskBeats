@@ -18,7 +18,7 @@ import kotlinx.coroutines.launch
     fun execute(taskAction: TaskAction){
         when (taskAction.actionType) {
             ActionType.DELETE.name -> deleteById(taskAction.task!!.id)
-            ActionType.CREATE.name -> insertIntoDataBase(taskAction.task!!)
+            ActionType.CREATE.name -> insertIntoDataBase(taskAction .task!!)
             ActionType.UPDATE.name -> updateIntoDataBase(taskAction.task!!)
             ActionType.DELETE_ALL.name -> deleteAll()
         }
